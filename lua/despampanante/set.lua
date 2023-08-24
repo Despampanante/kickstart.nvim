@@ -18,13 +18,13 @@ vim.o.incsearch = true
 -- Make line numbers default
 vim.wo.number = true
 
--- Enable mouse mode
+-- Enable mouse mode (lets you click around with mouse)
 vim.o.mouse = 'a'
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
+--vim.o.clipboard = 'unnamedplus'
 
 -- Indentation
 vim.o.tabstop = 4
@@ -36,8 +36,11 @@ vim.o.smartindent = true
 -- Wrap text
 vim.o.wrap = true
 
--- Enable break indent
+-- Enable break indent (keeps indentation in wrapped lines)
 vim.o.breakindent = true
+
+-- When wrapping move entire word to new line rather than char by char
+vim.o.linebreak = true
 
 -- Save undo history
 vim.opt.swapfile = false

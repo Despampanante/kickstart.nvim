@@ -2,7 +2,7 @@ local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
 local yank_group = augroup('HighlightYank', { clear = true })
-local TheMainGroup = augroup('TheMain', {})
+local TheDespampananteGroup = augroup('TheDespampanante', {})
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -16,9 +16,7 @@ autocmd('TextYankPost', {
 
 -- [[ Remove trailing whitespace on save]]
 autocmd({ "BufWritePre" }, {
-  group = TheMainGroup,
+  group = TheDespampananteGroup,
   pattern = "*",
   command = [[%s/\s\+$//e]],
 })
-
-
