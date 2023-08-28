@@ -31,6 +31,6 @@ return {
       else
         return "gf"
       end
-    end, { noremap = false, expr = true })
+    end, { desc = { "Go to obsidian link" }, noremap = false, expr = true })
   end,
 }
