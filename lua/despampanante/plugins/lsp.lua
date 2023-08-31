@@ -90,6 +90,8 @@ return {
             return
           end
 
+          print(client.name)
+
           -- Tsserver usually works poorly. Sorry you work with bad languages
           -- You can remove this line if you know what you're doing :)
           if client.name == 'tsserver' then
@@ -127,7 +129,10 @@ return {
       --  If you want to override the default filetypes that your language server will attach to you can
       --  define the property 'filetypes' to the map in question.
       local servers = {
+        marksman = {},
+        bashls = {},
         tsserver = {},
+        clangd = {},
         lua_ls = {
           Lua = {
             workspace = { checkThirdParty = false },
@@ -160,6 +165,10 @@ return {
           }
         end
       }
-    end,
+      require('lspconfig').millet.setup {
+        capabilities = capabilities,
+        on_attach = on_attach,
+      }
+    end
   },
 }

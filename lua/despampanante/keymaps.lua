@@ -1,7 +1,7 @@
 -- [[ Basic Keymaps ]]
 
 -- Open netrw at location in buffer
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = 'Open netrw in buffer file path' })
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -16,3 +16,6 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Go to note taking
+vim.keymap.set('n', '<leader>of', '<CMD>e $HOME/myVault<CR>', { desc = 'Open diagnostics list' })
