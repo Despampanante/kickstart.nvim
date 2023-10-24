@@ -14,6 +14,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
   },
+  { "mfussenegger/nvim-jdtls" },
   {
     "neovim/nvim-lspconfig",
     dependencies = { "folke/neodev.nvim" },
@@ -131,6 +132,7 @@ return {
       local servers = {
         pyright = {},
         marksman = {},
+        jdtls = {},
         bashls = {},
         tsserver = {},
         clangd = {},
@@ -164,9 +166,13 @@ return {
             settings = servers[server_name],
             filetypes = (servers[server_name] or {}).filetypes,
           }
-        end
+        end,
       }
       require('lspconfig').millet.setup {
+        capabilities = capabilities,
+        on_attach = on_attach,
+      }
+      require('lspconfig').prolog_ls.setup {
         capabilities = capabilities,
         on_attach = on_attach,
       }
