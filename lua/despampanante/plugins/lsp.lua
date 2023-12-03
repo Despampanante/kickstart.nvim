@@ -172,10 +172,6 @@ return {
         capabilities = capabilities,
         on_attach = on_attach,
       }
-      require('lspconfig').prolog_ls.setup {
-        capabilities = capabilities,
-        on_attach = on_attach,
-      }
     end
   },
 }

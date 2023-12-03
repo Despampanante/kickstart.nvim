@@ -62,6 +62,9 @@ vim.wo.signcolumn = 'yes'
 vim.o.updatetime = 50
 vim.o.timeoutlen = 300
 
+-- Set single status bar
+vim.o.laststatus = 3
+
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 

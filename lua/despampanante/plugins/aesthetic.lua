@@ -1,10 +1,10 @@
 return {
+
   {
-    -- Theme made by Folke
-    'folke/tokyonight.nvim',
+    'Mofiqul/dracula.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'tokyonight-moon'
+      vim.cmd.colorscheme 'dracula'
     end,
   },
 
@@ -15,7 +15,7 @@ return {
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'tokyonight',
+        theme = 'dracula',
         component_separators = '|',
         section_separators = '',
       },
